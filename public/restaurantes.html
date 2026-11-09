@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebCardápio - Escolha o restaurante</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body data-pagina="restaurantes">
+        <header>
+            <div class="marca">
+                <img src="img/logo.png" alt="Logo WebCardápio">
+                <h1><span class="destaque">Web</span>Cardápio</h1>
+            </div>
+            <nav>
+                <button id="sair">Sair</button>
+            </nav>
+        </header>
+        <main class="escolha">
+            <h2 id="saudacao"></h2>
+            <input id="busca" type="search" class="busca" placeholder="Buscar restaurante" aria-label="Buscar restaurante">
+            <div id="lista" class="grade-rest"></div>
+        </main>
+        <script src="js/dados.js"></script>
+        <script src="js/cliente.js"></script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebCardápio - Cadastrar restaurante</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body data-pagina="cadastro">
+        <div class="login-container">
+            <img src="img/logo.png" alt="Logo WebCardápio" class="logo-login">
+            <h1>Cadastrar restaurante</h1>
+            <form>
+                <div class="campo">
+                    <label for="nome">Nome do restaurante</label>
+                    <input id="nome" name="nome" type="text" placeholder="Ex.: Sabor da Casa" required>
+                </div>
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+                    <input id="descricao" name="descricao" type="text" placeholder="O que vocês servem" required>
+                </div>
+                <div class="campo">
+                    <label for="cnpj">CNPJ</label>
+                    <input id="cnpj" name="cnpj" type="text" placeholder="00.000.000/0000-00" required>
+                </div>
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" name="telefone" type="tel" placeholder="(63) 99999-9999" required>
+                </div>
+                <div class="campo">
+                    <label for="endereco">Endereço</label>
+                    <input id="endereco" name="endereco" type="text" placeholder="Rua, número e bairro" required>
+                </div>
+                <div class="campo">
+                    <label for="mesas">Número de mesas</label>
+                    <input id="mesas" name="mesas" type="number" placeholder="Ex.: 10" required>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="E-mail de acesso" required>
+                </div>
+                <div class="campo">
+                    <label for="senha">Criar senha</label>
+                    <input id="senha" name="senha" type="password" placeholder="Mínimo de 6 caracteres" required>
+                </div>
+                <div class="campo">
+                    <label for="confirmar">Confirmar senha</label>
+                    <input id="confirmar" name="confirmar" type="password" placeholder="Repita a senha" required>
+                </div>
+                <p id="erro" class="erro" role="alert"></p>
+                <button type="submit">Cadastrar restaurante</button>
+            </form>
+            <p class="cadastro-link">Já tem cadastro? <a href="restaurante-login.html">Entrar</a></p>
+        </div>
+        <script src="js/dados.js"></script>
+        <script src="js/restaurante.js"></script>
+    </body>
+</html>

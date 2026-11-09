@@ -1,0 +1,19 @@
+# Configuração para o Render (https://render.com) — plano gratuito.
+# No Render: New + → Blueprint → escolha o repositório. Ele lê este arquivo.
+services:
+  - type: web
+    name: webcardapio
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/saude
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true      # o Render cria um segredo aleatório sozinho
+      - key: DATABASE_URL
+        sync: false              # você cola a URL do Neon na hora de criar
+      - key: SEED
+        value: "true"

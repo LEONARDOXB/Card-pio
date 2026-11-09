@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebCardápio - Área do restaurante</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body data-pagina="login">
+        <div class="login-container">
+            <img src="img/logo.png" alt="Logo WebCardápio" class="logo-login">
+            <h1>Área do restaurante</h1>
+            <form>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="E-mail do restaurante" required>
+                </div>
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input id="senha" name="senha" type="password" placeholder="Digite sua senha" required>
+                </div>
+                <p id="erro" class="erro" role="alert"></p>
+                <button type="submit">Entrar</button>
+            </form>
+            <p class="cadastro-link">
+                Ainda não cadastrou seu restaurante? <a href="restaurante-cadastro.html">Cadastrar restaurante</a>
+            </p>
+            <p class="cadastro-link">Conta de teste: demo@restaurante.com / 123456</p>
+            <a href="index.html" class="voltar">Voltar para a página inicial</a>
+        </div>
+        <script src="js/dados.js"></script>
+        <script src="js/restaurante.js"></script>
+    </body>
+</html>

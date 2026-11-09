@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebCardápio - Painel do restaurante</title>
+        <link rel="stylesheet" href="painel.css">
+    </head>
+    <body data-pagina="painel">
+        <aside class="lateral">
+            <div class="marca">
+                <img src="img/logo.png" alt="Logo WebCardápio">
+                <strong id="nomeRest"></strong>
+            </div>
+            <nav>
+                <a href="#pedidos">Pedidos <span id="badge" class="badge" hidden></span></a><a href="#mesas">Mesas</a><a href="#produtos">Produtos</a>
+            </nav>
+            <button id="sair" class="btn claro">Sair</button>
+        </aside>
+        <main>
+            <section id="v-pedidos" class="visao">
+                <h1>Pedidos</h1>
+                <div id="quadro" class="quadro"></div>
+            </section>
+            <section id="v-mesas" class="visao" hidden>
+                <div class="topo">
+                    <h1>Mesas</h1>
+                    <div>
+                        <button id="menosMesa" class="btn claro">Remover última mesa</button>
+                        <button id="maisMesa" class="btn">Adicionar mesa</button>
+                    </div>
+                </div>
+                <div id="grade" class="grade"></div>
+            </section>
+            <section id="v-produtos" class="visao" hidden>
+                <h1>Produtos e preços</h1>
+                <div class="duas">
+                    <form id="formProd" class="cartao">
+                        <h2 id="tituloForm">Novo produto</h2>
+                        <label>
+                            Nome
+                            <input name="nome" required>
+                        </label>
+                        <label>
+                            Descrição
+                            <input name="descricao">
+                        </label>
+                        <label>
+                            Preço (R$)
+                            <input name="preco" inputmode="decimal" placeholder="22,90" required>
+                        </label>
+                        <label>
+                            Categoria
+                            <select id="categoria" name="categoria"></select>
+                        </label>
+                        <label>
+                            Foto (opcional)
+                            <input id="arquivo" type="file" accept="image/*">
+                        </label>
+                        <img id="previa" alt="Prévia da foto" hidden>
+                        <button class="btn" type="submit">Salvar produto</button>
+                        <button id="cancelar" type="button" class="btn claro" hidden>Cancelar edição</button>
+                    </form>
+                    <div id="lista"></div>
+                </div>
+            </section>
+        </main>
+        <script src="js/dados.js"></script>
+        <script src="js/restaurante.js"></script>
+    </body>
+</html>

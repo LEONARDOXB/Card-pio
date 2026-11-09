@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebCardápio - Carrinho</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body data-pagina="carrinho">
+        <header>
+            <div class="marca">
+                <img src="img/logo.png" alt="Logo WebCardápio">
+                <h1><span class="destaque">Web</span>Cardápio</h1>
+            </div>
+            <nav>
+                <button onclick="location.href='cardapio.html'">Voltar ao Cardápio</button>
+            </nav>
+        </header>
+        <main class="carrinho">
+            <h2>Meu Carrinho</h2>
+            <div id="listaCarrinho"></div>
+            <div class="resumo">
+                <div class="campo">
+                    <label for="mesa">Sua mesa</label>
+                    <select id="mesa"></select>
+                </div>
+                <div class="campo">
+                    <label for="obs">Observações (opcional)</label>
+                    <textarea id="obs" rows="2" placeholder="Ex.: sem cebola"></textarea>
+                </div>
+                <h3 id="total">Total: R$ 0,00</h3>
+                <div class="botoes-carrinho">
+                    <button id="limpar">Limpar Carrinho</button>
+                    <button id="finalizar">Finalizar Pedido</button>
+                </div>
+            </div>
+        </main>
+        <script src="js/dados.js"></script>
+        <script src="js/cliente.js"></script>
+    </body>
+</html>
